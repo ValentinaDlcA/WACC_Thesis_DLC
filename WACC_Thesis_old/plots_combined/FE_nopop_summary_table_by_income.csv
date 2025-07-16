@@ -1,0 +1,37 @@
+Technology,Scenario,IncomeLevel,2025,2030,2050
+Solar_PV,Below2,High income,0.0231,0.0222,0.022
+Solar_PV,Below2,Lower middle income,0.0312,0.0138,-0.0017
+Solar_PV,Below2,Upper middle income,0.0527,0.0207,0.0135
+Solar_PV,Delayed transition,High income,0.0228,0.022,0.0224
+Solar_PV,Delayed transition,Lower middle income,0.03,0.0124,0.0008
+Solar_PV,Delayed transition,Upper middle income,0.0522,0.0197,0.0152
+Solar_PV,NDC,High income,0.023,0.0222,0.0226
+Solar_PV,NDC,Lower middle income,0.0303,0.0126,0.0011
+Solar_PV,NDC,Upper middle income,0.0524,0.0198,0.0146
+Solar_PV,Netzero,High income,0.0232,0.0222,0.0219
+Solar_PV,Netzero,Lower middle income,0.0315,0.0138,-0.002
+Solar_PV,Netzero,Upper middle income,0.0528,0.0207,0.0138
+Wind_Offshore,Below2,High income,0.038,0.0371,0.0369
+Wind_Offshore,Below2,Lower middle income,0.0461,0.0287,0.0132
+Wind_Offshore,Below2,Upper middle income,0.0676,0.0356,0.0284
+Wind_Offshore,Delayed transition,High income,0.0377,0.0369,0.0373
+Wind_Offshore,Delayed transition,Lower middle income,0.0449,0.0273,0.0157
+Wind_Offshore,Delayed transition,Upper middle income,0.0671,0.0346,0.0301
+Wind_Offshore,NDC,High income,0.0379,0.0371,0.0375
+Wind_Offshore,NDC,Lower middle income,0.0452,0.0275,0.016
+Wind_Offshore,NDC,Upper middle income,0.0673,0.0347,0.0295
+Wind_Offshore,Netzero,High income,0.0381,0.0371,0.0368
+Wind_Offshore,Netzero,Lower middle income,0.0464,0.0287,0.0129
+Wind_Offshore,Netzero,Upper middle income,0.0677,0.0356,0.0287
+Wind_Onshore,Below2,High income,0.0226,0.0217,0.0215
+Wind_Onshore,Below2,Lower middle income,0.0307,0.0133,-0.0022
+Wind_Onshore,Below2,Upper middle income,0.0522,0.0202,0.013
+Wind_Onshore,Delayed transition,High income,0.0223,0.0215,0.0219
+Wind_Onshore,Delayed transition,Lower middle income,0.0295,0.0119,0.0003
+Wind_Onshore,Delayed transition,Upper middle income,0.0517,0.0192,0.0147
+Wind_Onshore,NDC,High income,0.0225,0.0217,0.0221
+Wind_Onshore,NDC,Lower middle income,0.0298,0.0121,0.0006
+Wind_Onshore,NDC,Upper middle income,0.0519,0.0193,0.0141
+Wind_Onshore,Netzero,High income,0.0227,0.0217,0.0214
+Wind_Onshore,Netzero,Lower middle income,0.031,0.0133,-0.0025
+Wind_Onshore,Netzero,Upper middle income,0.0523,0.0202,0.0133

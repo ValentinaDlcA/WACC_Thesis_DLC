@@ -1,0 +1,29 @@
+Technology,Scenario,Region,2025,2030,2050
+Wind_Offshore,Below2,East Asia and Pacific,0.0741,0.0731,0.0737
+Wind_Offshore,Below2,Europe and Central Asia,0.0775,0.0764,0.0772
+Wind_Offshore,Below2,Latin America and Caribbean,0.147,0.0754,0.0781
+Wind_Offshore,Below2,Middle East and North Africa,0.1319,0.0741,0.077
+Wind_Offshore,Below2,North America,0.0767,0.0759,0.0759
+Wind_Offshore,Below2,South Asia,0.086,0.0783,0.0803
+Wind_Offshore,Below2,Sub-Saharan Africa,0.1227,0.1174,0.1169
+Wind_Offshore,Delayed transition,East Asia and Pacific,0.0735,0.0728,0.0741
+Wind_Offshore,Delayed transition,Europe and Central Asia,0.0773,0.0763,0.0775
+Wind_Offshore,Delayed transition,Latin America and Caribbean,0.147,0.0753,0.0782
+Wind_Offshore,Delayed transition,Middle East and North Africa,0.1294,0.0738,0.0774
+Wind_Offshore,Delayed transition,North America,0.0758,0.0751,0.0764
+Wind_Offshore,Delayed transition,South Asia,0.0859,0.0782,0.0805
+Wind_Offshore,Delayed transition,Sub-Saharan Africa,0.1226,0.1175,0.1178
+Wind_Offshore,NDC,East Asia and Pacific,0.0737,0.0729,0.0743
+Wind_Offshore,NDC,Europe and Central Asia,0.0775,0.0764,0.0775
+Wind_Offshore,NDC,Latin America and Caribbean,0.1472,0.0754,0.0787
+Wind_Offshore,NDC,Middle East and North Africa,0.1298,0.0739,0.078
+Wind_Offshore,NDC,North America,0.0762,0.0759,0.0762
+Wind_Offshore,NDC,South Asia,0.0861,0.0782,0.0808
+Wind_Offshore,NDC,Sub-Saharan Africa,0.1228,0.1175,0.1174
+Wind_Offshore,Netzero,East Asia and Pacific,0.0743,0.0732,0.0735
+Wind_Offshore,Netzero,Europe and Central Asia,0.0775,0.0764,0.0772
+Wind_Offshore,Netzero,Latin America and Caribbean,0.147,0.0754,0.0781
+Wind_Offshore,Netzero,Middle East and North Africa,0.1327,0.0742,0.0759
+Wind_Offshore,Netzero,North America,0.077,0.0761,0.076
+Wind_Offshore,Netzero,South Asia,0.086,0.0783,0.0803
+Wind_Offshore,Netzero,Sub-Saharan Africa,0.1228,0.1173,0.1175

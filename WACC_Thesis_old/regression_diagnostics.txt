@@ -1,0 +1,77 @@
+=== Pooled OLS ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   wacc   R-squared:                       0.211
+Model:                            OLS   Adj. R-squared:                  0.190
+Method:                 Least Squares   F-statistic:                     10.15
+Date:                Mon, 16 Jun 2025   Prob (F-statistic):           5.58e-06
+Time:                        16:35:43   Log-Likelihood:                 269.99
+No. Observations:                 118   AIC:                            -532.0
+Df Residuals:                     114   BIC:                            -520.9
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                0.0998      0.019      5.341      0.000       0.063       0.137
+Urban_Share         -0.0004      0.000     -2.202      0.030      -0.001   -4.32e-05
+Rule_of_Law          0.0847      0.030      2.857      0.005       0.026       0.143
+Governance_Index    -0.0918      0.027     -3.423      0.001      -0.145      -0.039
+==============================================================================
+Omnibus:                       46.249   Durbin-Watson:                   2.013
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              141.586
+Skew:                           1.417   Prob(JB):                     1.80e-31
+Kurtosis:                       7.557   Cond. No.                     1.21e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.21e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+=== Fixed Effects ===
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                   wacc   R-squared:                        0.1287
+Estimator:                   PanelOLS   R-squared (Between):             -45.630
+No. Observations:                 118   R-squared (Within):               0.1287
+Date:                Mon, Jun 16 2025   R-squared (Overall):             -41.652
+Time:                        16:35:43   Log-likelihood                    308.98
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      3.7904
+Entities:                          38   P-value                           0.0136
+Avg Obs:                       3.1053   Distribution:                    F(3,77)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             3.7904
+                                        P-value                           0.0136
+Time periods:                       8   Distribution:                    F(3,77)
+Avg Obs:                       14.750                                           
+Min Obs:                       1.0000                                           
+Max Obs:                       33.000                                           
+                                                                                
+                                Parameter Estimates                                 
+====================================================================================
+                  Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------
+Urban_Share         -0.0160     0.0056    -2.8411     0.0058     -0.0272     -0.0048
+Rule_of_Law          0.6694     0.4044     1.6552     0.1020     -0.1359      1.4746
+Governance_Index     0.1327     0.2477     0.5355     0.5938     -0.3606      0.6259
+====================================================================================
+
+F-test for Poolability: 1.9489
+P-value: 0.0071
+Distribution: F(37,77)
+
+Included effects: Entity
+
+=== VIF ===
+           Variable        VIF
+0       Urban_Share  38.095982
+1       Rule_of_Law  66.964156
+2  Governance_Index  72.759827
+
+=== Breusch-Pagan Test ===
+Lagrange multiplier statistic: 7.310936706401527
+p-value: 0.0626205622920881
+f-value: 2.509873934937571
+f p-value: 0.06228269185291571

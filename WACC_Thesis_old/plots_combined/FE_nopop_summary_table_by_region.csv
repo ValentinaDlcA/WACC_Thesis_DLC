@@ -1,0 +1,85 @@
+Technology,Scenario,Region,2025,2030,2050
+Solar_PV,Below2,East Asia and Pacific,0.0102,0.0078,0.0028
+Solar_PV,Below2,Europe and Central Asia,0.0265,0.0256,0.0257
+Solar_PV,Below2,Latin America and Caribbean,0.0884,0.0238,0.0204
+Solar_PV,Below2,Middle East and North Africa,0.0784,0.0268,0.0199
+Solar_PV,Below2,North America,-0.0057,-0.0084,-0.0183
+Solar_PV,Below2,South Asia,0.0103,-0.0054,-0.0461
+Solar_PV,Below2,Sub-Saharan Africa,0.1246,0.1152,0.1147
+Solar_PV,Delayed transition,East Asia and Pacific,0.0095,0.007,0.0042
+Solar_PV,Delayed transition,Europe and Central Asia,0.0262,0.0255,0.026
+Solar_PV,Delayed transition,Latin America and Caribbean,0.0883,0.0236,0.0208
+Solar_PV,Delayed transition,Middle East and North Africa,0.0762,0.0262,0.0213
+Solar_PV,Delayed transition,North America,-0.0071,-0.01,-0.0165
+Solar_PV,Delayed transition,South Asia,0.0091,-0.0086,-0.0396
+Solar_PV,Delayed transition,Sub-Saharan Africa,0.1245,0.1153,0.1158
+Solar_PV,NDC,East Asia and Pacific,0.0097,0.0071,0.0043
+Solar_PV,NDC,Europe and Central Asia,0.0264,0.0256,0.026
+Solar_PV,NDC,Latin America and Caribbean,0.0886,0.0237,0.0217
+Solar_PV,NDC,Middle East and North Africa,0.0766,0.0262,0.0214
+Solar_PV,NDC,North America,-0.0064,-0.0087,-0.0164
+Solar_PV,NDC,South Asia,0.0094,-0.0083,-0.0398
+Solar_PV,NDC,Sub-Saharan Africa,0.1247,0.1153,0.1155
+Solar_PV,Netzero,East Asia and Pacific,0.0104,0.0079,0.0027
+Solar_PV,Netzero,Europe and Central Asia,0.0265,0.0256,0.0257
+Solar_PV,Netzero,Latin America and Caribbean,0.0884,0.0238,0.0204
+Solar_PV,Netzero,Middle East and North Africa,0.0791,0.0268,0.0191
+Solar_PV,Netzero,North America,-0.0053,-0.0082,-0.0182
+Solar_PV,Netzero,South Asia,0.0104,-0.0053,-0.0458
+Solar_PV,Netzero,Sub-Saharan Africa,0.1246,0.1151,0.1153
+Wind_Offshore,Below2,East Asia and Pacific,0.0251,0.0227,0.0177
+Wind_Offshore,Below2,Europe and Central Asia,0.0414,0.0405,0.0406
+Wind_Offshore,Below2,Latin America and Caribbean,0.1033,0.0387,0.0353
+Wind_Offshore,Below2,Middle East and North Africa,0.0933,0.0417,0.0348
+Wind_Offshore,Below2,North America,0.0092,0.0065,-0.0034
+Wind_Offshore,Below2,South Asia,0.0252,0.0095,-0.0312
+Wind_Offshore,Below2,Sub-Saharan Africa,0.1395,0.1301,0.1296
+Wind_Offshore,Delayed transition,East Asia and Pacific,0.0244,0.0219,0.0191
+Wind_Offshore,Delayed transition,Europe and Central Asia,0.0411,0.0404,0.0409
+Wind_Offshore,Delayed transition,Latin America and Caribbean,0.1032,0.0385,0.0357
+Wind_Offshore,Delayed transition,Middle East and North Africa,0.0911,0.0411,0.0362
+Wind_Offshore,Delayed transition,North America,0.0078,0.0049,-0.0016
+Wind_Offshore,Delayed transition,South Asia,0.024,0.0063,-0.0247
+Wind_Offshore,Delayed transition,Sub-Saharan Africa,0.1394,0.1302,0.1307
+Wind_Offshore,NDC,East Asia and Pacific,0.0246,0.022,0.0192
+Wind_Offshore,NDC,Europe and Central Asia,0.0413,0.0405,0.0409
+Wind_Offshore,NDC,Latin America and Caribbean,0.1035,0.0386,0.0366
+Wind_Offshore,NDC,Middle East and North Africa,0.0915,0.0411,0.0363
+Wind_Offshore,NDC,North America,0.0085,0.0062,-0.0015
+Wind_Offshore,NDC,South Asia,0.0243,0.0066,-0.0249
+Wind_Offshore,NDC,Sub-Saharan Africa,0.1396,0.1302,0.1304
+Wind_Offshore,Netzero,East Asia and Pacific,0.0253,0.0228,0.0176
+Wind_Offshore,Netzero,Europe and Central Asia,0.0414,0.0405,0.0406
+Wind_Offshore,Netzero,Latin America and Caribbean,0.1033,0.0387,0.0353
+Wind_Offshore,Netzero,Middle East and North Africa,0.094,0.0417,0.034
+Wind_Offshore,Netzero,North America,0.0096,0.0067,-0.0033
+Wind_Offshore,Netzero,South Asia,0.0253,0.0096,-0.0309
+Wind_Offshore,Netzero,Sub-Saharan Africa,0.1395,0.13,0.1302
+Wind_Onshore,Below2,East Asia and Pacific,0.0097,0.0073,0.0023
+Wind_Onshore,Below2,Europe and Central Asia,0.026,0.0251,0.0252
+Wind_Onshore,Below2,Latin America and Caribbean,0.0879,0.0233,0.0199
+Wind_Onshore,Below2,Middle East and North Africa,0.0779,0.0263,0.0194
+Wind_Onshore,Below2,North America,-0.0062,-0.0089,-0.0188
+Wind_Onshore,Below2,South Asia,0.0098,-0.0059,-0.0466
+Wind_Onshore,Below2,Sub-Saharan Africa,0.1241,0.1147,0.1142
+Wind_Onshore,Delayed transition,East Asia and Pacific,0.009,0.0065,0.0037
+Wind_Onshore,Delayed transition,Europe and Central Asia,0.0257,0.025,0.0255
+Wind_Onshore,Delayed transition,Latin America and Caribbean,0.0878,0.0231,0.0203
+Wind_Onshore,Delayed transition,Middle East and North Africa,0.0757,0.0257,0.0208
+Wind_Onshore,Delayed transition,North America,-0.0076,-0.0105,-0.017
+Wind_Onshore,Delayed transition,South Asia,0.0086,-0.0091,-0.0401
+Wind_Onshore,Delayed transition,Sub-Saharan Africa,0.124,0.1148,0.1153
+Wind_Onshore,NDC,East Asia and Pacific,0.0092,0.0066,0.0038
+Wind_Onshore,NDC,Europe and Central Asia,0.0259,0.0251,0.0255
+Wind_Onshore,NDC,Latin America and Caribbean,0.0881,0.0232,0.0212
+Wind_Onshore,NDC,Middle East and North Africa,0.0761,0.0257,0.0209
+Wind_Onshore,NDC,North America,-0.0069,-0.0092,-0.0169
+Wind_Onshore,NDC,South Asia,0.0089,-0.0088,-0.0403
+Wind_Onshore,NDC,Sub-Saharan Africa,0.1242,0.1148,0.115
+Wind_Onshore,Netzero,East Asia and Pacific,0.0099,0.0074,0.0022
+Wind_Onshore,Netzero,Europe and Central Asia,0.026,0.0251,0.0252
+Wind_Onshore,Netzero,Latin America and Caribbean,0.0879,0.0233,0.0199
+Wind_Onshore,Netzero,Middle East and North Africa,0.0786,0.0263,0.0186
+Wind_Onshore,Netzero,North America,-0.0058,-0.0087,-0.0187
+Wind_Onshore,Netzero,South Asia,0.0099,-0.0058,-0.0463
+Wind_Onshore,Netzero,Sub-Saharan Africa,0.1241,0.1146,0.1148
