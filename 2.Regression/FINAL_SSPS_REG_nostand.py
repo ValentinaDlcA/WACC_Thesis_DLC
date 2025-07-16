@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # === Load merged dataset ===
-data_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/final_merged_dataset.csv"
+data_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/1.Cleaning_and_Merges/final_merged_dataset.csv"
 df = pd.read_csv(data_path).dropna()
 
 # === Ensure index and dependent variable ===

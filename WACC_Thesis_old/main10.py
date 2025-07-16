@@ -91,7 +91,7 @@ merged_macro_wacc_gdp = pd.merge(
 
 print(merged_macro_wacc_gdp.head())
 
-# 5. Train Regression Model
+# 5. Train 2.Regression Model
 features = ["inflation", "unemployment", "gdp_ppp", "is_solar", "is_wind_onshore", "is_wind_offshore"]
 X = merged_macro_wacc_gdp[features]
 y = merged_macro_wacc_gdp["wacc"]
@@ -249,7 +249,7 @@ merged_macro_wacc = pd.merge(
     suffixes=("_macro", "_wacc")
 )
 
-# === Train Regression Model ===
+# === Train 2.Regression Model ===
 features = ["inflation", "unemployment", "gdp", "is_solar", "is_wind_onshore", "is_wind_offshore"]
 X = merged_macro_wacc[features]
 y = merged_macro_wacc["wacc"]

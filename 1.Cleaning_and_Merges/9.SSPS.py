@@ -1,20 +1,7 @@
-"""
-End-to-end cleaner for Governance, Urbanization and Rule-of-Law workbooks
-Creates tidy long-format DataFrames with columns:
-Scenario | Country | Variable | ISO | Year | Value
-Splits them into requested year slices and (optionally) writes CSVs.
-
-Dependencies:  pandas  pycountry
-    >>  pip install pandas pycountry
-"""
-
+#CLEANING AND CREATING SSPS DF FOR REGRESSION
 from pathlib import Path
 import pandas as pd
 import pycountry
-
-# ───────────────────────────────────────────────────────────────────────────────
-# 1.  Universal helper
-# ───────────────────────────────────────────────────────────────────────────────
 
 def tidy_governance_file(
     file_path: str | Path,
@@ -27,26 +14,25 @@ def tidy_governance_file(
 ) -> pd.DataFrame:
     """Load → clean → reshape → return a fully de-NA’ed long DataFrame."""
     # ── load
-    df = pd.read_excel(file_path, sheet_name=sheet)
+    try:
+        df = pd.read_excel(file_path, sheet_name=sheet, engine="openpyxl")
+    except Exception as e:
+        raise ValueError(f"Failed to read file {file_path}: {e}")
 
-    # ── header hygiene
     df.columns = (
         df.columns.astype(str)
                   .str.strip()
                   .str.replace(r"\s+", " ", regex=True)
     )
 
-    # ── optional pre-drops
     if drop_empty_cols:
         df = df.dropna(axis=1, how="all")
     if drop_empty_rows:
         df = df.dropna(axis=0, how="all")
 
-    # ── drop first "Model" col if present
     if df.columns[0].strip().lower() == "model":
         df = df.drop(columns=[df.columns[0]])
 
-    # ── rename / guarantee key cols
     for col in df.columns:
         if col.lower() == "region":
             df = df.rename(columns={col: "Country"})
@@ -63,7 +49,6 @@ def tidy_governance_file(
     if "Unit" in df.columns:
         df = df.drop(columns=["Unit"])
 
-    # ── ISO-3 codes
     def to_iso(name: str) -> str | None:
         try:
             return pycountry.countries.lookup(name).alpha_3
@@ -71,9 +56,8 @@ def tidy_governance_file(
             return None
 
     df["ISO"] = df["Country"].apply(to_iso)
-    df = df.dropna(subset=["ISO"])              # keep only real countries
+    df = df.dropna(subset=["ISO"])
 
-    # ── reshape to long
     year_cols = [c for c in df.columns if c.isdigit()]
     id_cols   = ["Scenario", "Country", "Variable", "ISO"]
 
@@ -82,44 +66,30 @@ def tidy_governance_file(
                 var_name="Year", value_name="Value")
           .assign(Year=lambda d: d["Year"].astype(int))
           .sort_values(id_cols + ["Year"])
-          .dropna(subset=id_cols + ["Year", "Value"])   # remove ANY remaining NaNs
+          .dropna(subset=id_cols + ["Year", "Value"])
           .reset_index(drop=True)
     )
 
     return df_long
 
-
 # ───────────────────────────────────────────────────────────────────────────────
-# 2.  File paths  (adjust if your project lives elsewhere)
+# Full paths (from you)
 # ───────────────────────────────────────────────────────────────────────────────
-
-base = Path(
-    "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/"
-    "demo/PyCharmLearningProject/data1/SSPS"
-)
 
 paths = {
-    "governance":   base / "governance.xlsx",
-    "urbanization": base / "urbanization.xlsx",
-    "rule_law":     base / "rule_law.xlsx",
+    "governance":   "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/SSPS/governance.xlsx",
+    "urbanization": "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/SSPS/urbanization.xlsx",
+    "rule_law":     "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/SSPS/rule_law.xlsx",
 }
 
 # ───────────────────────────────────────────────────────────────────────────────
-# 3.  Build tidy master tables
+# Build tidy data
 # ───────────────────────────────────────────────────────────────────────────────
 
-df_gov  = tidy_governance_file(paths["governance"],
-                               default_variable="Governance")
+df_gov  = tidy_governance_file(paths["governance"], default_variable="Governance")
+df_urb  = tidy_governance_file(paths["urbanization"], drop_empty_cols=True, default_variable="Urbanization")
+df_rule = tidy_governance_file(paths["rule_law"], drop_empty_rows=True, default_variable="Rule of Law")
 
-df_urb  = tidy_governance_file(paths["urbanization"],
-                               drop_empty_cols=True,
-                               default_variable="Urbanization")
-
-df_rule = tidy_governance_file(paths["rule_law"],
-                               drop_empty_rows=True,
-                               default_variable="Rule of Law")
-
-# ───────────────────────────────────────────────────────────────────────────────
 # 4.  Year-range splits
 # ───────────────────────────────────────────────────────────────────────────────
 

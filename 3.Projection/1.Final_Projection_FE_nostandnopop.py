@@ -7,12 +7,10 @@ import pandas as pd
 # 1. File paths
 # ---------------------------------------------------------------
 wacc_path = (
-    "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/"
-    "PyCharmLearningProject/WACC Thesis/final_wacc_macro_historical.csv"
+    "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/1.Cleaning_and_Merges/final_wacc_macro_historical.csv"
 )
 macro_path = (
-    "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/"
-    "PyCharmLearningProject/WACC Thesis/ngfs_final_merge.csv"
+    "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/1.Cleaning_and_Merges/ngfs_final_merge.csv"
 )
 
 # ---------------------------------------------------------------
@@ -80,8 +78,7 @@ proj_df = pd.concat(proj_frames, ignore_index=True)
 # 6. Save final output
 # ---------------------------------------------------------------
 out_path = (
-    "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/"
-    "demo/PyCharmLearningProject/WACC Thesis/wacc_projection_FE_nopop.csv"
+    "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_FE_nopop.csv"
 )
 proj_df.to_csv(out_path, index=False)
 

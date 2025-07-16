@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load your local CSV
-file_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/macrofinal.csv"
+file_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/NGFS RAW/macrofinal.csv"
 df = pd.read_csv(file_path)
 
 # Drop rows where Scenario is missing

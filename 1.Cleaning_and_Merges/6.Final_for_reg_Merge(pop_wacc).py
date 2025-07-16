@@ -1,8 +1,8 @@
 import pandas as pd
-
+#CREATES THE FINAL DATASET FOR THE REGRESSION WITH WACC
 # File paths (adjust if needed)
-pop_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/Population/Population.csv"
-wacc_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/wacc_with_gdpppp2021.csv"
+pop_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/Population/Population.csv"
+wacc_path = "/1.Cleaning_and_Merges/wacc_with_gdpppp2021.csv"
 
 # Load the Population file, skipping the first 4 rows
 pop_df_raw = pd.read_csv(pop_path, skiprows=4)

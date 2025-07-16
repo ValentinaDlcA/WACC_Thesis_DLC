@@ -2,7 +2,7 @@ import pandas as pd
 
 # === Step 1: Load both datasets ===
 macro_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/cleaned_macro_data_pivoted.csv"
-popgdp_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/popgdp_cleaned.csv"
+popgdp_path = "/1.Cleaning_and_Merges/popgdp_cleaned.csv"
 
 df_macro = pd.read_csv(macro_path)
 df_popgdp = pd.read_csv(popgdp_path)

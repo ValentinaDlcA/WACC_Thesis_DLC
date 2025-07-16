@@ -1,8 +1,9 @@
+#CREATES FINAL DATA FRAMES WACC PROJECTIONS OLS AND FE WITH REGIONS AND INCOME LEVEL FOR PLOTTING
 import pandas as pd
 
 # --- File paths ---
-ols_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/wacc_projection_by_scenario.csv"
-fe_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/wacc_projection_FE_nopop.csv"
+ols_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_by_scenario.csv"
+fe_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_FE_nopop.csv"
 
 # --- Load files ---
 ols_df = pd.read_csv(ols_path)
@@ -80,8 +81,8 @@ ols_df = enrich_with_metadata(ols_df)
 fe_df = enrich_with_metadata(fe_df)
 
 # --- Save both ---
-ols_out = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/wacc_projection_OLS_with_groups.csv"
-fe_out = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/wacc_projection_FE_nopop_with_groups.csv"
+ols_out = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_OLS_with_groups.csv"
+fe_out = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_FE_nopop_with_groups.csv"
 
 ols_df.to_csv(ols_out, index=False)
 fe_df.to_csv(fe_out, index=False)

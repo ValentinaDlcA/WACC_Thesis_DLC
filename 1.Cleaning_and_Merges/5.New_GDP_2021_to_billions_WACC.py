@@ -1,11 +1,11 @@
 #DATA CLEANING WB GDP PPP CONSTANT 2021 TRANSFORMED TO BILLIONS TO MATCH WITH PROJECTED GDP PPP FROM NFGS
-
+#CREATES FINAL DATASET CALLED "wacc_with_gdpppp2021.csv"
 import pandas as pd
 import pycountry
 import re
 import csv
 
-path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/GDP/gdp_ppp_2021constant.csv"  # <-- set full path
+path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/GDP/gdp_ppp_2021constant.csv"  # <-- set full path
 
 
 # 1) Read file line-by-line, skipping metadata rows
@@ -108,10 +108,10 @@ gdp_ppp_long.to_csv("gdp_ppp_2021_long.csv", index=False)
 
 # 1️⃣  Load the cleaned GDP-PPP long file you just created
 #     (if it's still in memory, skip this read and reuse the DataFrame)
-gdp_ppp_long = pd.read_csv("../Data/data1_old/gdp_ppp_2021_long.csv")   # update path if saved elsewhere
+gdp_ppp_long = pd.read_csv("../Data/data1_old/GDP/gdp_ppp_2021_long.csv")   # update path if saved elsewhere
 
 # 2️⃣  Load the WACC dataset
-wacc_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/merged_with_wacc_updated.csv"
+wacc_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/WACC_Thesis_old/merged_with_wacc_updated.csv"
 wacc_df = pd.read_csv(wacc_path)
 
 # 3️⃣  Align the Year column type

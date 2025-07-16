@@ -1,4 +1,4 @@
-#Merging RAW data from WorldBank database
+#Merging RAW data from WorldBank database with WACC RAW: creates "merged_with_wacc.csv"
 
 import pandas as pd
 from pathlib import Path
@@ -68,22 +68,22 @@ print(df.head())
 
 #Add WACC data set
 # Load macroeconomic dataset
-macro = pd.read_csv("../WACC_Thesis_old/merged_macro_data.csv")
+macro = pd.read_csv("/1.Cleaning_and_Merges/merged_macro_data.csv")
 # macro['country'] = macro['country'].str.strip().str.lower()
 macro['year'] = pd.to_numeric(macro['year'], errors='coerce')
 
 # Load WACC dataset
-wacc = pd.read_excel("/Users/valentinadlc/PyCharmMiscProject/WACC_Thesis/Data/data_old/WACC.xlsx", engine="openpyxl")
+wacc = pd.read_excel("/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data_projection_df/WACC.xlsx", engine="openpyxl")
 
-# ✅ Keep only the columns we care about
-wacc = wacc[['Country', 'Technology', 'Year', 'WACC AT']]
+# ✅ Keep only the columns we care about (using the actual names from the Excel file)
+wacc = wacc[['Country name', 'Technology', 'Financing year', 'WACC (nominal, after-tax)']]
 
-# Rename columns to standardize
+# ✅ Rename columns to standardize
 wacc.rename(columns={
-    'Country': 'country',
+    'Country name': 'country',
     'Technology': 'technology',
-    'Year': 'year',
-    'WACC AT': 'wacc'
+    'Financing year': 'year',
+    'WACC (nominal, after-tax)': 'wacc'
 }, inplace=True)
 
 # Clean strings and convert year

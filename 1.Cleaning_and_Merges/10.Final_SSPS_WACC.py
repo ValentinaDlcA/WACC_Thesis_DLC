@@ -1,10 +1,10 @@
-#MERGE SSPS AND WACC
+#MERGE SSPS AND WACC: CREATES  Final merged dataset saved to 'final_merged_dataset.csv'
 import pandas as pd
 
 # === Load CSV files ===
-urban_df = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/urbanization_pre2024.csv")
-rule_df = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/rule_law_pre2024.csv")
-gov_df = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/governance_1996_2024.csv")
+urban_df = pd.read_csv("/1.Cleaning_and_Merges/urbanization_pre2024.csv")
+rule_df = pd.read_csv("/1.Cleaning_and_Merges/rule_law_pre2024.csv")
+gov_df = pd.read_csv("/1.Cleaning_and_Merges/governance_1996_2024.csv")
 
 # === Filter by scenario and variable ===
 urban_clean = urban_df[

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset
-file_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/popgdp.csv"
+file_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/popgdp.csv"
 df = pd.read_csv(file_path)
 
 # Step 1: Clean "Model" column values
@@ -34,7 +34,7 @@ id_vars = [col for col in df.columns if col not in year_columns]
 df_melted = df.melt(id_vars=id_vars, var_name="Year", value_name="Value")
 
 # Save cleaned dataset (optional)
-output_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/popgdp_cleaned.csv"
+output_path = "/1.Cleaning_and_Merges/popgdp_cleaned.csv"
 df_melted.to_csv(output_path, index=False)
 
 # Show preview

@@ -91,7 +91,7 @@ for model in models:
                 income_data = subset[subset["IncomeLevel"] == income].sort_values("Year")
                 plt.plot(income_data["Year"], income_data["wacc_projection"], label=income)
 
-            plt.title(f"WACC Projection Over Time – {tech} – {scen} – Model: {model}")
+            plt.title(f"WACC 3.Projection Over Time – {tech} – {scen} – Model: {model}")
             plt.xlabel("Year")
             plt.ylabel("Average WACC")
             plt.legend(loc="center left", bbox_to_anchor=(1.0, 0.5))

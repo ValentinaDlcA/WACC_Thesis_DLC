@@ -16,8 +16,7 @@ from statsmodels.stats.stattools import durbin_watson
 # 1. Load data
 # ---------------------------------------------------------------
 df = pd.read_csv(
-    "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/"
-    "PyCharmLearningProject/WACC Thesis/final_wacc_macro_historical.csv"
+    "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/1.Cleaning_and_Merges/final_wacc_macro_historical.csv"
 )
 
 # Create technology dummies

@@ -1,9 +1,10 @@
+#Creates macro_gdp_merged.csv
 # 1. GDP PPP CLEANING
 import pandas as pd
 import pycountry
 
 # === Load the raw GDP PPP data ===
-gdp_path = "/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data/gdp_ppp.csv"  # Update this with your actual path
+gdp_path = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data_projection_df/gdp_ppp.csv"  # Update this with your actual path
 gdp_df = pd.read_csv(gdp_path)
 
 # === Drop unnecessary columns ===
@@ -58,7 +59,7 @@ print(gdp_ppp_long.head())
 
 #CLEAN WACC FILE
 # === Load the WACC file ===
-wacc_raw = pd.read_excel("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data/WACC.xlsx")
+wacc_raw = pd.read_excel("/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data_projection_df/WACC.xlsx")
 
 # === Manual ISO patch for unrecognized countries ===
 manual_iso_map = {
@@ -74,10 +75,12 @@ def get_iso_alpha3_patched(country):
         return None
 
 # === Step 1: Keep only necessary columns ===
-wacc_cleaned = wacc_raw[["Country", "Technology", "Year", "WACC AT"]].copy()
+wacc_cleaned = wacc_raw[['Country name', 'Technology', 'Financing year', 'WACC (nominal, after-tax)']].copy()
 wacc_cleaned = wacc_cleaned.rename(columns={
-    "Technology": "technology",
-    "WACC AT": "wacc"
+     'Country name': 'Country',
+    'Technology': 'technology',
+    'Financing year': 'Year',
+    'WACC (nominal, after-tax)': 'wacc'
 })
 
 # === Step 2: Add technology dummy variables ===
@@ -108,7 +111,7 @@ wacc_cleaned.to_csv("wacc_cleaned.csv", index=False)
 
 #MACROFINAL CLEANING
 # === Load macrofinal ===
-macro_raw = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/macrofinal.csv")  # Update with your path
+macro_raw = pd.read_csv("/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/Data/data1_old/NGFS RAW/macrofinal.csv")  # Update with your path
 
 # 1. Remove 'Model' column
 if 'Model' in macro_raw.columns:

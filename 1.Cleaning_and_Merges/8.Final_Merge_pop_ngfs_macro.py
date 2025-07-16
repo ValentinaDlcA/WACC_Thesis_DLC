@@ -1,8 +1,9 @@
 import pandas as pd
+#CREATES ngfs_final_merge.csv for 3.Projection
 
 # Load the files
-macro_gdp_merged = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/WACC Thesis/macro_gdp_merged.csv")
-popgdp_cleaned = pd.read_csv("/Users/valentinadlc/Library/Caches/JetBrains/PyCharm2025.1/demo/PyCharmLearningProject/data1/popgdp_cleaned.csv")
+macro_gdp_merged = pd.read_csv("/1.Cleaning_and_Merges/macro_gdp_merged.csv")
+popgdp_cleaned = pd.read_csv("/1.Cleaning_and_Merges/popgdp_cleaned.csv")
 
 # Step 1: Rename scenarios
 popgdp_cleaned['Scenario'] = popgdp_cleaned['Scenario'].replace({
