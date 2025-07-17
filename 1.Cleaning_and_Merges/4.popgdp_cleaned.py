@@ -1,3 +1,4 @@
+#cleans population and gdp from another NGFS model
 import pandas as pd
 
 # Load the dataset

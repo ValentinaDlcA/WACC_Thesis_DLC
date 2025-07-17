@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Set output directory for plots
-output_dir = "/Users/valentinadlc/PyCharmMiscProject/WACC_Thesis/Plots/Projection FE and OLS Plots"
+output_dir = "/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/4.Plots/FE and OLS Plots"
 os.makedirs(output_dir, exist_ok=True)
 
 # Load both datasets

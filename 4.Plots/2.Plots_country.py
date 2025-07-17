@@ -6,9 +6,9 @@ import os
 output_dir = "/Users/valentinadlc/PyCharmMiscProject/WACC_Thesis/Plots/Plots_country_OLS_FE"
 os.makedirs(output_dir, exist_ok=True)
 
-# Load both datasets
-fe_df = pd.read_csv("/Users/valentinadlc/PyCharmMiscProject/WACC_Thesis/Data/wacc_projection_FE_nopop_with_groups.csv")
-ols_df = pd.read_csv("/Users/valentinadlc/PyCharmMiscProject/WACC_Thesis/Data/wacc_projection_OLS_with_groups.csv")
+# Load data
+ols_df = pd.read_csv("/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_OLS_with_groups.csv")
+fe_df = pd.read_csv("/Users/valentinadlc/Documents/MASTER/MASTER THESIS/WACC_Thesis_DLC/3.Projection/wacc_projection_FE_nopop_with_groups.csv")
 
 # Label each dataset
 fe_df["Model"] = "FE"

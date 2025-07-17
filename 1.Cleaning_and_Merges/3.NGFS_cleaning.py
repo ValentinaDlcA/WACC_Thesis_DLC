@@ -1,3 +1,4 @@
+#Cleans the NIGEM model variables from "macrofinal" raw dataset
 import pandas as pd
 import re
 
